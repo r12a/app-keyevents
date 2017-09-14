@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<!--code adapted from Danny Goodman, http://safari.oreilly.com/0596527403/orm9780596527402-CHP-VI
+-->
+		<title>Key event monitor</title>
+
+		<style type="text/css">
+body { background: white; color: black; font-family: sans-serif; }
+.smallprint { font-size: 80%; }
+td { text-align: left; padding: 10px; }
+.s, #modifier { font-size: small; color: teal; }
+#character { font-size: 200%; color: red; text-align: center; }
+</style>
+
+		<script language="JavaScript" type="text/javascript" src="eventsmanager.js">
+//</script>
+
+		<script type="text/javascript" src="kefunctions.js" language="JavaScript">//</script>
+
+	</head>
+
+	<body>
+
+		<h1>Key event monitor</h1>
+		<form action="none" id="myForm" name="myForm">
+			<p>Press some keys and key combinations:<br/><input id="entry" size="60"/></p>
+		</form>
+
+		<table>
+			<tr>
+				<th>Data</th>
+				<th>keydown</th>
+				<th>keypress</th>
+				<th>keyup</th>
+				<th>character</th>
+			</tr>
+			<tr>
+				<td>keyCode</td>
+				<td id="downKey">—</td>
+				<td id="pressKey">—</td>
+				<td id="upKey">—</td>
+				<td rowspan="4" id="character">—</td>
+			</tr>
+			<tr>
+				<td>charCode</td>
+				<td id="downChar">—</td>
+				<td id="pressChar">—</td>
+				<td id="upChar">—</td>
+			</tr>
+			<tr>
+				<td>modifiers</td>
+				<td colspan="3" id="modifier">—</td>
+			</tr>
+			<tr>
+				<td>Target</td>
+				<td colspan="3" id="keyTarget">—</td>
+			</tr>
+		</table>
+
+		<p class="smallprint">Version: $Id: keyevents.html,v 1.1 2007/08/02 19:57:13 rishida Exp $</p>
+
+	</body>
+</html>

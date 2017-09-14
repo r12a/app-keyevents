@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Key event monitor</title>
+<meta name="description" content="Show results of key presses." />
+<link rel="stylesheet" href="/shared/style/docs.css" type="text/css" />
+<style type="text/css">
+.result {
+	font-size: 160%;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	color: #F60;
+	}
+td { width: 6em; }
+	.result span { font-size: 80%; }
+.result p {
+	margin: 0;
+	}
+input {
+	color: #0C3;
+	font-size: 150%;
+	border-radius: 10px;
+	line-height: 1.5em;
+	padding: 5px;
+	border: 1px solid #ddd;
+	}
+input[type='button'] {
+	background-color: #fff;
+	font-size: 130%;
+	cursor:pointer;
+	}
+#sitelinks {
+	margin-bottom: 3em;
+	}
+h1 {
+	margin-bottom: 30px;
+	}
+</style>
+
+	<script type="text/javascript" src="/shared/code/boilerplate.js"></script>
+
+	<script type="text/javascript" src="eventsmanager.js"></script>
+	<script type="text/javascript" src="kefunctions.js"></script>
+</head>
+
+<body class="app">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('/shared/images/world.gif','Key event monitor','');</script>
+</header>
+
+
+<div class="section">
+  <aside class="sidebar">
+    <p>See how <a href="https://www.w3.org/TR/uievents/#events-keyboardevents">key events</a> create assignments within the current browser.</p></aside>
+</div>
+		<div class="section"> 
+			<p>Type into this field:<br/><input id="entry"/> <span style="display:inline-block; vertical-align: bottom; line-height: 1.2;"><button onClick="clearEntry()">clear</button><br/><button onClick="uniview = window.open('/uniview/?charlist='+document.getElementById('entry').value); uniview.focus();">show</button></span></p>
+
+			<table id="results">
+				<tr>
+					<th></th>
+					<th>keydown</th>
+					<th>keyup</th>
+				</tr>
+				<tr>
+					<th>key</th>
+					<td id="keyDownKey" class="result">—</td>
+					<td id="keyUpKey" class="result">—</td>
+				</tr>
+				<tr>
+					<th>code</th>
+					<td id="codeDownKey" class="result">—</td>
+					<td id="codeUpKey" class="result">—</td>
+				</tr>
+				<tr>
+					<th>modifiers</th>
+					<td colspan="2" class="result" id="modifier">—</td>
+				</tr>
+			</table>
+
+		</div>
+
+
+<footer>
+<div class="smallprint">
+Last commit <a href="https://github.com/r12a/r12a.github.io/tree/master/apps/keyevents"><!-- #BeginDate format:En2 -->14-Sep-2017<!-- #EndDate --></a>.
+Make a <a href="https://github.com/r12a/r12a.github.io/issues/new?title=[keyevents app]%20%20ADD%20TITLE%20HERE">comment</a>. 
+Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
+</div>
+</footer>
+
+</body>
+</html>
