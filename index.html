@@ -14,6 +14,7 @@
 	}
 td { width: 6em; }
 	.result span { font-size: 80%; }
+thead th { text-align: center; }
 .result p {
 	margin: 0;
 	}
@@ -59,11 +60,14 @@ h1 {
 			<p>Type into this field:<br/><input id="entry"/> <span style="display:inline-block; vertical-align: bottom; line-height: 1.2;"><button onClick="clearEntry()">clear</button><br/><button onClick="uniview = window.open('/uniview/?charlist='+document.getElementById('entry').value); uniview.focus();">show</button></span></p>
 
 			<table id="results">
+				<thead>
 				<tr>
 					<th></th>
 					<th>keydown</th>
 					<th>keyup</th>
 				</tr>
+				</thead>
+				<tbody>
 				<tr>
 					<th>key</th>
 					<td id="keyDownKey" class="result">—</td>
@@ -78,6 +82,7 @@ h1 {
 					<th>modifiers</th>
 					<td colspan="2" class="result" id="modifier">—</td>
 				</tr>
+				</tbody>
 			</table>
 
 		</div>
