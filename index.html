@@ -37,6 +37,12 @@ input[type='button'] {
 h1 {
 	margin-bottom: 30px;
 	}
+summary {
+	margin: 6em 32% 0 7.5%;
+	font-size: 90%;
+	cursor: pointer;
+	}
+summary:hover { color: red;}
 </style>
 
 	<script type="text/javascript" src="/shared/code/boilerplate.js"></script>
@@ -69,12 +75,12 @@ h1 {
 				</thead>
 				<tbody>
 				<tr>
-					<th>key</th>
+					<th>.key</th>
 					<td id="keyDownKey" class="result">—</td>
 					<td id="keyUpKey" class="result">—</td>
 				</tr>
 				<tr>
-					<th>code</th>
+					<th>.code</th>
 					<td id="codeDownKey" class="result">—</td>
 					<td id="codeUpKey" class="result">—</td>
 				</tr>
@@ -87,10 +93,18 @@ h1 {
 
 		</div>
 
-
+<details>
+<summary>What this does</summary>
+	<p>When you hit or release a key, certain data is sent to the browser, and stored in the <code class="kw" translate="no">KeyboardEvent</code> object. This includes the <code class="kw" translate="no">.key</code>  and the <code class="kw" translate="no">.code</code> values. The <code class="kw" translate="no">.key</code> value represents the Unicode character(s) the user expects to send to the browser when the key is pressed (ie. typically what's on the keycap). The <code class="kw" translate="no">.code</code> value contains a string that identifies the identity of the physical key that was pressed, rather than the intended characters to insert. The <code class="kw" translate="no">KeyboardEvent</code> object also has information about certain modifier keys that are depressed at the time. This app shows that information.</p>
+	<p>Note: If you hit a dead key (like an accent key) followed by another key, <code class="kw" translate="no">KeyboardEvent</code> sees these as separate things, and doesn't store the result of combining those. If you hit a key while using an IME (eg. for Japanese input), <code class="kw" translate="no">KeyboardEvent</code> doesn't capture the end result of the composition you are doing.</p>
+	<p>Learn more <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent">about <code class="kw" translate="no">KeyboardEvent</code></a>. </p>
+	</details>
+	
+	
+	
 <footer>
-<div class="smallprint">
-Last commit <a href="https://github.com/r12a/app-keyevents"><!-- #BeginDate format:En2 -->14-Sep-2017<!-- #EndDate --></a>.
+<div class="smallprint" style="margin-right: 1em;">
+Last commit <a href="https://github.com/r12a/app-keyevents"><!-- #BeginDate format:En2 -->17-Sep-2017<!-- #EndDate --></a>.
 Make a <a href="https://github.com/r12a/app-keyevents/issues/new?title=[keyevents app]%20%20ADD%20TITLE%20HERE">comment</a>. 
 Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
 </div>

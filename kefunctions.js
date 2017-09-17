@@ -16,7 +16,7 @@ function clearEntry () {
 	
 function showModifiers (evt) {
 	evt = (evt) ? evt : ((event) ? event : null);
-	if (evt.shiftKey || evt.ctrlKey || evt.altKey) { 
+	if (evt.shiftKey || evt.ctrlKey || evt.altKey || evt.metaKey) { 
 		var newContent = "";
 		if (evt.shiftKey) {
 			newContent += "Shift ";
